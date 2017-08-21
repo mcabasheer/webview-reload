@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewReload" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duW-Gb-i2w">
+                                <rect key="frame" x="0.0" y="120" width="600" height="480"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Hb6-R2-gf6"/>
+                                </connections>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.google.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bd0-UN-CGi">
+                                <rect key="frame" x="12" y="82" width="488" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhD-R2-gDd">
+                                <rect key="frame" x="535" y="81" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tvq-yl-ZSJ"/>
+                                </constraints>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <action selector="goClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7H-zt-uNO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hhD-R2-gDd" firstAttribute="leading" secondItem="Bd0-UN-CGi" secondAttribute="trailing" constant="20" id="2kM-d9-7Jb"/>
+                            <constraint firstAttribute="trailing" secondItem="duW-Gb-i2w" secondAttribute="trailing" id="53W-6Y-JoC"/>
+                            <constraint firstItem="duW-Gb-i2w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="9gf-cl-DyP"/>
+                            <constraint firstAttribute="trailing" secondItem="hhD-R2-gDd" secondAttribute="trailing" constant="30" id="JrA-6Y-vTc"/>
+                            <constraint firstItem="duW-Gb-i2w" firstAttribute="top" secondItem="hhD-R2-gDd" secondAttribute="bottom" constant="10" id="XDx-HN-qZk"/>
+                            <constraint firstItem="duW-Gb-i2w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jbv-ZJ-re3"/>
+                            <constraint firstItem="duW-Gb-i2w" firstAttribute="top" secondItem="Bd0-UN-CGi" secondAttribute="bottom" constant="10" id="k6u-gr-roA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="duW-Gb-i2w" secondAttribute="bottom" id="mkN-YQ-SWE"/>
+                            <constraint firstItem="Bd0-UN-CGi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="uYN-GO-9JC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textfield" destination="Bd0-UN-CGi" id="tvd-Jg-4YL"/>
+                        <outlet property="webView" destination="duW-Gb-i2w" id="UCO-2V-QcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="337"/>
+        </scene>
+    </scenes>
+</document>

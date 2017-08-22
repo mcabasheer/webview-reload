@@ -17,14 +17,14 @@ class ViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        textfield.text = "https://stackoverflow.com/"
-        webView.loadRequest(NSURLRequest(URL: NSURL.init(string: textfield.text!)!))
+        textfield.text = "https://www.google.com.sg/"
+        webView.loadRequest(URLRequest(url: URL.init(string: textfield.text!)!))
         
         }
     
-    @IBAction func goClicked(sender: UIButton) {
+    @IBAction func goClicked(_ sender: UIButton) {
         
-        webView.loadRequest(NSURLRequest(URL: NSURL.init(string: textfield.text!)!))
+        webView.loadRequest(URLRequest(url: URL.init(string: textfield.text!)!))
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,27 +33,25 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     
     //MARK: UIWebView Delegate
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
-        
-        
-        if request.URL?.absoluteString != textfield.text {
+        if request.url?.host != "www.google.com.sg" {
             // Close your view and go back to previous screen
-           
+           self.navigationController?.popViewController(animated: true)
             return false
         }
         
         return true
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         
     }
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         
     }
 

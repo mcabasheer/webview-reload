@@ -12,6 +12,7 @@
 		C3EA825E1F4B0FA200F366A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA825C1F4B0FA200F366A7 /* Main.storyboard */; };
 		C3EA82601F4B0FA200F366A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3EA825F1F4B0FA200F366A7 /* Assets.xcassets */; };
 		C3EA82631F4B0FA200F366A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA82611F4B0FA200F366A7 /* LaunchScreen.storyboard */; };
+		C66114E41F4BC6C40050A70B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66114E31F4BC6C40050A70B /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C3EA825F1F4B0FA200F366A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3EA82621F4B0FA200F366A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3EA82641F4B0FA200F366A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66114E31F4BC6C40050A70B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				C3EA82581F4B0FA200F366A7 /* AppDelegate.swift */,
+				C66114E31F4BC6C40050A70B /* RootViewController.swift */,
 				C3EA825A1F4B0FA200F366A7 /* ViewController.swift */,
 				C3EA825C1F4B0FA200F366A7 /* Main.storyboard */,
 				C3EA825F1F4B0FA200F366A7 /* Assets.xcassets */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					C3EA82541F4B0FA200F366A7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -137,6 +141,7 @@
 			files = (
 				C3EA825B1F4B0FA200F366A7 /* ViewController.swift in Sources */,
 				C3EA82591F4B0FA200F366A7 /* AppDelegate.swift in Sources */,
+				C66114E41F4BC6C40050A70B /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +258,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basheer.WebViewReload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -264,6 +270,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.basheer.WebViewReload;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -286,6 +293,7 @@
 				C3EA82691F4B0FA200F366A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
